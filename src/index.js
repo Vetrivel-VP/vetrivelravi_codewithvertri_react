@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
+import YoutubeVideo from "./YoutubeVideo";
+import { Route, Routes } from "react-router-dom";
+import Nav from "./Nav";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      {/* Navbar */}
+      <Nav />
+
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/video" element={<YoutubeVideo />} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
