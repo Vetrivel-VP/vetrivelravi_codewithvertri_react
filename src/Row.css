@@ -1,35 +1,169 @@
-.row{
-    margin-left: 20px;
-    color: #fff;
+.row {
+  margin-left: 20px;
+  color: #fff;
 }
 
-.row_title{
-    font-size: 18px;
-    text-transform: uppercase;
+.row_title {
+  font-size: 18px;
+  text-transform: uppercase;
 }
-.row_conepts{
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
-    position: relative;
-    margin: 30px 0;
-}
-
-.row_concept{
-    width: 100%;
-    object-fit: contain;
-    max-height: 120px;
-    transition: transform 450ms;
-    margin-right: 15px;
-    border-radius: 5px;
+.row_conepts {
+  display: flex;
+  /* overflow-y: auto; */
+  overflow-x: scroll;
+  padding: 20px;
+  position: relative;
+  margin: 30px 0;
 }
 
-.row_conepts::-webkit-scrollbar{
-    display: none;
+.row_conepts::-webkit-scrollbar {
+  display: none;
 }
 
-.row_concept:hover{
-    transform: scale(1.08);
+/* .row_concept {
+  max-height: 120px;
+  transition: transform 450ms;
+  margin-right: 15px;
+  border-radius: 5px;
+  max-width: 200px;
+  background: rgba(0, 0, 0, 0.6);
+  min-width: 230px;
+  min-height: 120px;
+  overflow: hidden;
+  position: relative;
 }
 
+.divCount {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  line-height: 25px;
+  clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+}
+
+.row_concept img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.row_conepts::-webkit-scrollbar {
+  display: none;
+}
+
+.row_concept:hover {
+  transform: scale(1.2);
+  max-width: 400px;
+  max-height: 255px;
+  z-index: 10;
+  filter: drop-shadow(0px 0 20px rgba(0, 0, 0, 0.5));
+}
+
+.divBack {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+} */
+
+.thumbnail {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.row_concept {
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.divCount {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  line-height: 25px;
+  clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);
+}
+
+.divBack {
+  display: none;
+}
+
+.row_concept:hover {
+  z-index: 101;
+}
+
+.row_concept:hover .thumbnail {
+  transform: scale(1.3);
+  transition: transform 600ms cubic-bezier(0.21, 1, 0.81, 1);
+}
+
+.row_concept:hover .divBack {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 600ms cubic-bezier(0.21, 1, 0.81, 1);
+  transform: scale(1.3);
+  border-radius: 5px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.row_concept:hover .divBack p {
+  font-size: 12px;
+  margin: 20px 10px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.row_concept:hover .divBack .icon {
+  display: flex;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.row_concept:hover .divBack .icon a {
+  position: fixed;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.row_concept:hover .divBack .icon a:nth-child(1) {
+  left: 20px;
+}
+.row_concept:hover .divBack .icon a:nth-child(2) {
+  right: 20px;
+}
+
+.row_concept:hover .divBack .icon a:nth-child(1):hover i {
+  color: #ff0000;
+  transition: 0.5s;
+}
+
+.row_concept:hover .divBack .icon a:nth-child(2):hover i {
+  color: #00a2ff;
+  transition: 0.5s;
+}
+
+.row_concept:hover .divBack .added_date {
+  font-size: 10px;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 20px;
+}
