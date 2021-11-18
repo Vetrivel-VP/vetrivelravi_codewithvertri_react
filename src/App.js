@@ -5,6 +5,7 @@ import Row from "./Row";
 import requests from "./request";
 import Banner from "./Banner";
 import MyLoader from "./MyLoader";
+import Footer from "./Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -43,6 +44,8 @@ function App() {
             title="Microsoft Excel"
             fetchUrl={requests.fetch_concept_excel}
           />
+
+          <Footer />
         </div>
       )}
     </div>

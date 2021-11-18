@@ -42,7 +42,7 @@ function Row({ title, fetchUrl }) {
       <div className="row_conepts">
         {concepts &&
           concepts.map((concept, index) => (
-            <div className="row_concept">
+            <div className="row_concept" key={concept.concept_id}>
               <div className="divCount">{index + 1}</div>
               <img
                 className="thumbnail"
